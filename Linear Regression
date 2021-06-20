@@ -2,18 +2,21 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
+# using to get data from file
 def GetData(filename):
     data = np.genfromtxt(filename, delimiter=",")
     dataX = data[:,0]
     dataY = data[:,1]
     return dataX,dataY  
-
+    
+# define a cost/error funciton 
 def ErrorFunction(K,B,dataX,dataY):
     totalError = 0
     for i in range(len(dataX)):
         totalError += (1/len(dataX))*(dataY[i] - (K*dataX[i] + B))**2
     return totalError
 
+# calculate partial derivate of a point by five paras: dataX,dataY,InitialK,InitialB,LearningRate
 def CalculateGradient(dataX,dataY,InitialK,InitialB,LearningRate):
     PartialK=0
     PartialB=0
@@ -25,11 +28,13 @@ def CalculateGradient(dataX,dataY,InitialK,InitialB,LearningRate):
     CurrentB = InitialB - LearningRate*PartialB
     return CurrentK,CurrentB
 
+# achieve the gradient descent algorithm
 def GradientDesecentOperator(dataX,dataY,InitialK,InitialB,LearningRate,num_iterations):
     for i in range(num_iterations):
         InitialK,InitialB=CalculateGradient(dataX,dataY,InitialK,InitialB,LearningRate)
     return InitialK,InitialB
-
+    
+# use matplotlib to plot the linear regression line and the dataset
 def Draw(dataX,dataY,K,B,Error):
     fig, ax = plt.subplots(1, 1,figsize=(6, 5), dpi=100)
     plt.scatter(dataX, dataY,c='darkmagenta',alpha=1)
