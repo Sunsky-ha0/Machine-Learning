@@ -2,7 +2,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-# using to get data from file
+# using to get data from dataset file('traindata.txt')
 def GetData(filename):
     data = np.genfromtxt(filename, delimiter=",")
     dataX = data[:,0]
