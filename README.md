@@ -1,7 +1,7 @@
 # Mechine-Learning
 Record some basic examples when i learn Mechine Learning.
 # Environment
-jupyter notebook(python)
+Jupyter notebook(python)
 
 
 ## A.Linear Regression
