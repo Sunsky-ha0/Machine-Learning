@@ -11,3 +11,6 @@ jupyter notebook(python)
 
 ## C.Dimensionality Reduction
   Reducing the number of random variables to consider.
+
+## D.Back propagation
+  Back propagation : we start by computing the δ^((out))  term for the output layer and then we go back a layer to compute the δ^((h))  term for the previous hidden layer and then we go back another step to compute δ for another hidden layer and so on. We'r sort of back propagating the errors from the output layer to the last hideen layer and another hidden layer until the input layer. ![image](https://user-images.githubusercontent.com/76501135/126061209-9158509f-c3b1-46e8-a032-7fa0b3d729a6.png)
