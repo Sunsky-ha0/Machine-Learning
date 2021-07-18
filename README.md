@@ -13,5 +13,6 @@ jupyter notebook(python)
   Reducing the number of random variables to consider.
 
 ## D.Back propagation
-<font color="#0000dd">Why it named back propagation: we start by computing the δ^(out) term for the output layer and then we go back a layer to compute the δ^(hidden)  term for the previous hidden layer and then we go back another step to compute δ for another hidden layer and so on. We'r sort of back propagating the errors from the output layer to the last hideen layer and another hidden layer until the input layer. </font><br /> 
+```Why it named back propagation: we start by computing the δ^(out) term for the output layer and then we go back a layer to compute the δ^(hidden)  term for the previous hidden layer and then we go back another step to compute δ for another hidden layer and so on. We'r sort of back propagating the errors from the output layer to the last hideen layer and another hidden layer until the input layer.
+```diff
 
